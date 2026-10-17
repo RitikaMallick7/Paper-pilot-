@@ -14,7 +14,7 @@ venv.bak/
 # Environment
 .env
 
-# Qdrant data
+
 qdrant_data/
 
 # PDFs
