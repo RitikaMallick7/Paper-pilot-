@@ -54,7 +54,11 @@ def read_root():
     }
 
 
-
+@app.get("/health")
+def health_check():
+    """Health check endpoint."""
+    return {"status": "healthy"}
+    
 
 
 @app.post("/query", response_model=QueryResponse)
