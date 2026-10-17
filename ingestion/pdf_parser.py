@@ -8,7 +8,14 @@ class PDFParser:
     """Parses PDFs and extracts text with section detection."""
     
     # Common section headers in academic papers
-    
+    SECTION_PATTERNS = [
+        r'^\s*(Abstract|Introduction|Related Work|Background|Methods?|Methodology|'
+        r'Experiments?|Results?|Discussion|Conclusion|Conclusions|References|'
+        r'Acknowledgments?|Future Work)\s*$',
+        r'^\s*\d+\.\s+(Abstract|Introduction|Related Work|Background|Methods?|'
+        r'Methodology|Experiments?|Results?|Discussion|Conclusion|Conclusions|'
+        r'References|Acknowledgments?|Future Work)\s*$',
+    ]
     
     def __init__(self):
         """Initialize the PDF parser."""
