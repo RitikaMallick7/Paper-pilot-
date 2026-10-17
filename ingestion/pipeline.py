@@ -18,9 +18,7 @@ class IngestionPipeline:
             category=config.ARXIV_CATEGORY,
             max_results=config.NUM_PAPERS_TO_INGEST
         )
-        self.parser = PDFParser()
-        self.chunker = SectionChunker()
-        self.embedder = EmbeddingGenerator(model_name=config.EMBEDDING_MODEL)
+        
         self.vector_store = QdrantVectorStore(
             host=config.QDRANT_HOST,
             port=config.QDRANT_PORT,
