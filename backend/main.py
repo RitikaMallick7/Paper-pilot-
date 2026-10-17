@@ -32,7 +32,14 @@ class Citation(BaseModel):
 
 
 
-
+class QueryResponse(BaseModel):
+    """Response model for the query endpoint."""
+    answer: str
+    citations: List[Citation]
+    grounding_confidence: float
+    self_check_passed: bool
+    self_check_reasoning: str
+    query_type: str
 
 @app.get("/")
 def read_root():
