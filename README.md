@@ -2,6 +2,7 @@
 
 An agentic RAG system for research papers with continuous evaluation. PaperPilot ingests arXiv research papers, answers user questions with grounded citations, and continuously evaluates its own answer quality using Ragas metrics.
 
+
 ## Architecture
 
 ```
