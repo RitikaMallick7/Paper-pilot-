@@ -8,7 +8,6 @@ load_dotenv()
 
 
 class Config:
-    """Application configuration."""
     
     # LLM Provider
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "anthropic")
